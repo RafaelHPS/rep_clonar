@@ -29,5 +29,6 @@ jobs:
           echo '3'
           git config --local user.email "rafael.souza123@fatec.sp.gov.br"
           git config --local user.name "RafaelHPS"
+          git add .
           git commit -a -m "Replace nomes do projeto para pode ser usado no cookiecutter"
           git push https://${{ secrets.MEU_TOKEN }}@github.com/RafaelHPS/rep_clonar.git
