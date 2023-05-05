@@ -16,5 +16,5 @@ jobs:
           find . -name "*.txt" -type f -print0 | xargs -0 sed -i 's/abobrinha/banana/g'
           git config --local user.email "rafael.souza123@fatec.sp.gov.br"
           git config --local user.name "RafaelHPS"
-          git commit -a -m "Replace Foo Bar"
+          git commit -a -m "Replace nomes do projeto para pode ser usado no cookiecutter"
           git push https://${{ secrets.MEU_TOKEN }}@github.com/RafaelHPS/rep_clonar.git
