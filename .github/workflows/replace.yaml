@@ -19,8 +19,8 @@ jobs:
           find . -wholename "./setup.py" -type f -print0 | xargs -0 sed -i 's/description="Framework used by T2C to help develop automations in BotCity"/description="{{cookiecutter.descricao_projeto}}"/g'
           find . -wholename "./setup.py" -type f -print0 | xargs -0 sed -i 's/"framework":/"{{cookiecutter.nome_projeto}}":/g'
           find . -wholename "./framework/*.py" -type f -print0 | xargs -0 sed -i 's/from framework./from {{cookiecutter.nome_projeto}}./g'
-          mv framework.botproj {{cookiecutter.nome_projeto}}.botproj
-          mv framework {{cookiecutter.nome_projeto}}
+          mv ./framework.botproj ./{{cookiecutter.nome_projeto}}.botproj
+          mv ./framework ./{{cookiecutter.nome_projeto}}
           git config --local user.email "rafael.souza123@fatec.sp.gov.br"
           git config --local user.name "RafaelHPS"
           git commit -a -m "Replace nomes do projeto para pode ser usado no cookiecutter"
