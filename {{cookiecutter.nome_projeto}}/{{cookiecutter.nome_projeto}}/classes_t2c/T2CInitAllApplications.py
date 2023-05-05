@@ -1,8 +1,8 @@
 from botcity.web import WebBot, Browser
 from botcity.core import DesktopBot
-from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
-from framework.classes_t2c.utils.T2CExceptions import BusinessRuleException
-from framework.classes_t2c.sqlite.T2CSqliteQueue import T2CSqliteQueue
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CExceptions import BusinessRuleException
+from {{cookiecutter.nome_projeto}}.classes_t2c.sqlite.T2CSqliteQueue import T2CSqliteQueue
 
 #Classe feita para ser invocada principalmente no começo de um processo, para iniciar os processos necessários para a automação
 class T2CInitAllApplications:
