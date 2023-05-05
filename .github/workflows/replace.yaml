@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Replace Text
         run: |
-          find . -name "*.txt" -type f -print0 | xargs -0 sed -i 's/foo/bar/g'
+          find . -name "*.txt" -type f -print0 | xargs -0 sed -i 's/abobrinha/banana/g'
           git config --local user.email "rafael.souza123@fatec.sp.gov.br"
           git config --local user.name "RafaelHPS"
           git commit -a -m "Replace Foo Bar"
