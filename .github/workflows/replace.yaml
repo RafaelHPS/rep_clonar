@@ -15,16 +15,16 @@ jobs:
       - name: Replace Text
         run: |
           dir
-          find . -wholename "./setup.py" -type f -print0 | xargs -0 sed -i 's/name="botcity_framework_t2c"/name="{{cookiecutter.nome_projeto}}"/g'
-          find . -wholename "./setup.py" -type f -print0 | xargs -0 sed -i 's/description="Framework used by T2C to help develop automations in BotCity"/description="{{cookiecutter.descricao_projeto}}"/g'
-          find . -wholename "./setup.py" -type f -print0 | xargs -0 sed -i 's/"framework":/"{{cookiecutter.nome_projeto}}":/g'
-          find . -wholename "./framework/*.py" -type f -print0 | xargs -0 sed -i 's/from framework./from {{cookiecutter.nome_projeto}}./g'
+          find . -wholename "./{{cookiecutter.nome_projeto}}/setup.py" -type f -print0 | xargs -0 sed -i 's/name="botcity_framework_t2c"/name="{{cookiecutter.nome_projeto}}"/g'
+          find . -wholename "./{{cookiecutter.nome_projeto}}/setup.py" -type f -print0 | xargs -0 sed -i 's/description="Framework used by T2C to help develop automations in BotCity"/description="{{cookiecutter.descricao_projeto}}"/g'
+          find . -wholename "./{{cookiecutter.nome_projeto}}/setup.py" -type f -print0 | xargs -0 sed -i 's/"framework":/"{{cookiecutter.nome_projeto}}":/g'
+          find . -wholename "./{{cookiecutter.nome_projeto}}/framework/*.py" -type f -print0 | xargs -0 sed -i 's/from framework./from {{cookiecutter.nome_projeto}}./g'
           dir
           echo '1'
-          mv ./framework.botproj ./{{cookiecutter.nome_projeto}}.botproj
+          mv ./{{cookiecutter.nome_projeto}}/framework.botproj ./{{cookiecutter.nome_projeto}}.botproj
           dir
           echo '2'
-          mv ./framework ./{{cookiecutter.nome_projeto}}
+          mv ./{{cookiecutter.nome_projeto}}/framework ./{{cookiecutter.nome_projeto}}/{{cookiecutter.nome_projeto}}
           dir
           echo '3'
           git config --local user.email "rafael.souza123@fatec.sp.gov.br"
