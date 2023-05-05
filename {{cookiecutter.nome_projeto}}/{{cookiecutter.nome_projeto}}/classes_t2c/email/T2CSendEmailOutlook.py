@@ -1,5 +1,5 @@
 from pathlib import Path
-from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
 import win32com.client as win32
 
 ROOT_DIR = Path(__file__).parent.parent.parent.__str__()
