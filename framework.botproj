@@ -1,0 +1,8 @@
+{
+  "name": "framework",
+  "sourceDirPath": "/framework/",
+  "resourceDirPath": "/framework/resources/",
+  "sourceDirRelative": true,
+  "resourceDirRelative": true,
+  "botId": "framework"
+}
