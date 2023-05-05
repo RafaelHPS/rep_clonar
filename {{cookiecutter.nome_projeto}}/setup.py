@@ -18,15 +18,15 @@ with open(path.join(here, 'requirements.txt')) as requirements_file:
 
 
 setup(
-    name="{{cookiecutter.nome_projeto}}",
+    name="botcity_framework_t2c",
     version=version,
-    description="{{cookiecutter.descricao_projeto}}",
+    description="Framework used by T2C to help develop automations in BotCity",
     long_description=readme,
     long_description_content_type='text/markdown',
     packages=find_packages(exclude=['docs', 'tests']),
     include_package_data=True,
     package_data={
-        "{{cookiecutter.nome_projeto}}": [
+        "framework": [
             # When adding files here, remember to update MANIFEST.in as well,
             # or else they will not be included in the distribution on PyPI!
             # 'path/to/data_file',
