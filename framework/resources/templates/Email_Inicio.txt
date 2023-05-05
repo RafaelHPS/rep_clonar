@@ -1,5 +1,0 @@
-<p>Prezados!</p>
-<p>O rob&ocirc; <strong>*NOME_ROBO*</strong> acabou de ser iniciado.</p>
-<br>
-<p>Atenciosamente,</p>
-<p><strong><em>RPA</em></strong></p>
