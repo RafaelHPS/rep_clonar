@@ -1,7 +1,7 @@
 from botcity.web import WebBot, Browser
 from botcity.core import DesktopBot
-from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
-from framework.classes_t2c.utils.T2CExceptions import BusinessRuleException
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CExceptions import BusinessRuleException
 
 #Classe feita para ser invocada em casos de system exceptions no processamento, para resetar o processamento
 #Pode ser usado em outras partes do processo também, dependendo de como a automação for programada
