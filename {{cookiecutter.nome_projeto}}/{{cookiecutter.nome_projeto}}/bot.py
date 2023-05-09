@@ -26,18 +26,18 @@ from botcity.core import DesktopBot
 # Using the Maestro SDK
 from botcity.maestro import *
 
-from framework.classes_t2c.email.T2CSendEmail import T2CSendEmail
-from framework.classes_t2c.email.T2CSendEmailOutlook import T2CSendEmailOutlook
-from framework.classes_t2c.T2CInitAllSettings import T2CInitAllSettings
-from framework.classes_t2c.sqlite.T2CSqliteQueue import T2CSqliteQueue
-from framework.classes_t2c.relatorios.T2CRelatorios import T2CRelatorios
-from framework.classes_t2c.T2CInitAllApplications import T2CInitAllApplications
-from framework.classes_t2c.T2CCloseAllApplications import T2CCloseAllApplications
-from framework.classes_t2c.T2CKillAllProcesses import T2CKillAllProcesses
-from framework.classes_t2c.T2CProcess import T2CProcess
-from framework.classes_t2c.utils.T2CExceptions import BusinessRuleException
-from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
-from framework.classes_t2c.sqlserver.T2CSqlAnaliticoSintetico import T2CSqlAnaliticoSintetico
+from {{cookiecutter.nome_projeto}}.classes_t2c.email.T2CSendEmail import T2CSendEmail
+from {{cookiecutter.nome_projeto}}.classes_t2c.email.T2CSendEmailOutlook import T2CSendEmailOutlook
+from {{cookiecutter.nome_projeto}}.classes_t2c.T2CInitAllSettings import T2CInitAllSettings
+from {{cookiecutter.nome_projeto}}.classes_t2c.sqlite.T2CSqliteQueue import T2CSqliteQueue
+from {{cookiecutter.nome_projeto}}.classes_t2c.relatorios.T2CRelatorios import T2CRelatorios
+from {{cookiecutter.nome_projeto}}.classes_t2c.T2CInitAllApplications import T2CInitAllApplications
+from {{cookiecutter.nome_projeto}}.classes_t2c.T2CCloseAllApplications import T2CCloseAllApplications
+from {{cookiecutter.nome_projeto}}.classes_t2c.T2CKillAllProcesses import T2CKillAllProcesses
+from {{cookiecutter.nome_projeto}}.classes_t2c.T2CProcess import T2CProcess
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CExceptions import BusinessRuleException
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from {{cookiecutter.nome_projeto}}.classes_t2c.sqlserver.T2CSqlAnaliticoSintetico import T2CSqlAnaliticoSintetico
 from webdriver_manager import chrome, firefox, microsoft
 import datetime
 

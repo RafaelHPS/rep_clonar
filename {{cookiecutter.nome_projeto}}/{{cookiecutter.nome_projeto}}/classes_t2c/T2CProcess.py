@@ -1,7 +1,7 @@
 from botcity.web import WebBot, Browser
 from botcity.core import DesktopBot
-from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
-from framework.classes_t2c.utils.T2CExceptions import BusinessRuleException
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CExceptions import BusinessRuleException
 
 #Classe responsável pelo processamento principal, necessário preencher com o seu código no método execute
 class T2CProcess:
