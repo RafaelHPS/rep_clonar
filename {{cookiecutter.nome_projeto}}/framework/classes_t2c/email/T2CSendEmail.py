@@ -1,6 +1,6 @@
 from botcity.plugins.email import BotEmailPlugin
 from pathlib import Path
-from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
+from framework.classes_t2c.utils.T2CMaestro import T2CMaestro, LogLevel
 
 ROOT_DIR = Path(__file__).parent.parent.parent.__str__()
 
