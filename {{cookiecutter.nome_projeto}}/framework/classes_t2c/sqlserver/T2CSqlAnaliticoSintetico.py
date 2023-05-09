@@ -1,4 +1,4 @@
-from {{cookiecutter.nome_projeto}}.classes_t2c.utils.T2CMaestro import T2CMaestro
+from framework.classes_t2c.utils.T2CMaestro import T2CMaestro
 import datetime
 import pyodbc
 
