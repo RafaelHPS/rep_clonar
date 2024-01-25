@@ -49,7 +49,7 @@ jobs:
             print(f"Extracted Issue Number: {var_strIssueNumber}")
             
             # Export the issue_code as an environment variable
-            subprocess.Popen('echo "issue_number={var_strIssueNumber}" >> "$GITHUB_ENV"', shell=True)
+            subprocess.Popen(f'echo "issue_number={var_strIssueNumber}" >> "$GITHUB_ENV"', shell=True)
         else:
             print("Issue Number not found in the issue body.")
         EOF
