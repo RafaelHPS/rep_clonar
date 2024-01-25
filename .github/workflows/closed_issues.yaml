@@ -1,4 +1,4 @@
-name: Copy Issue To Qualidade
+name: Show Closed Issues
 on:
   issues:
     types: [closed]
