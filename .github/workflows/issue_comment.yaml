@@ -24,6 +24,7 @@ jobs:
         import re
         import os
         import json
+        import subprocess
 
         # Get event path from the environment variable
         var_strPathEventFile = os.environ['GITHUB_EVENT_PATH']
@@ -48,7 +49,7 @@ jobs:
             print(f"Extracted Issue Number: {var_strIssueNumber}")
             
             # Export the issue_code as an environment variable
-            print(f'issue_number={var_strIssueNumber} >> $GITHUB_ENV')
+            subprocess.Popen('echo "issue_number={var_strIssueNumber}" >> "$GITHUB_ENV"', shell=True)
         else:
             print("Issue Number not found in the issue body.")
         EOF
