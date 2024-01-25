@@ -46,11 +46,14 @@ jobs:
         if var_matchIssueNumber:
             var_strIssueNumber = var_matchIssueNumber.group(1)
             print(f"Extracted Issue Number: {var_strIssueNumber}")
-            echo "issue_number=$var_strIssueNumber" >> $GITHUB_ENV
+            echo "::set-output name=issue_number::$var_strIssueNumber"
             # You can use the 'issue_number' variable in further actions or steps
         else:
             print("Issue Number not found in the issue body.")
         EOF
-        echo $issue_number
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Show issue output number
+      run: |
+        echo "Saida numero ${{ steps.extract_code.outputs.issue_number }}"
