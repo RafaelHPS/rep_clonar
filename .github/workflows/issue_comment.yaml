@@ -46,8 +46,9 @@ jobs:
         if var_matchIssueNumber:
             var_strIssueNumber = var_matchIssueNumber.group(1)
             print(f"Extracted Issue Number: {var_strIssueNumber}")
-            echo "::set-output name=issue_number::$var_strIssueNumber"
-            # You can use the 'issue_number' variable in further actions or steps
+            
+            # Export the issue_code as an environment variable
+            print(f"::set-env name=issue_number::{var_strIssueNumber}")
         else:
             print("Issue Number not found in the issue body.")
         EOF
@@ -56,4 +57,4 @@ jobs:
 
     - name: Show issue output number
       run: |
-        echo "Saida numero ${{ steps.extract_code.outputs.issue_number }}"
+        echo "Saida numero ${{ env.issue_number }}"
