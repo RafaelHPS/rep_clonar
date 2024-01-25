@@ -48,7 +48,7 @@ jobs:
             print(f"Extracted Issue Number: {var_strIssueNumber}")
             
             # Export the issue_code as an environment variable
-            print(f"::set-env name=issue_number::{var_strIssueNumber}")
+            print(f'"issue_number={var_strIssueNumber}" >> "$GITHUB_ENV"')
         else:
             print("Issue Number not found in the issue body.")
         EOF
@@ -57,4 +57,4 @@ jobs:
 
     - name: Show issue output number
       run: |
-        echo "Saida numero ${{ env.issue_number }}"
+        echo "Saida numero $issue_number"
