@@ -48,7 +48,7 @@ jobs:
             print(f"Extracted Issue Number: {var_strIssueNumber}")
             
             # Export the issue_code as an environment variable
-            print(f'"issue_number={var_strIssueNumber}" >> "$GITHUB_ENV"')
+            print(f'issue_number={var_strIssueNumber} >> $GITHUB_ENV')
         else:
             print("Issue Number not found in the issue body.")
         EOF
