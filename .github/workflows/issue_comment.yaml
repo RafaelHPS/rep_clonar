@@ -27,7 +27,7 @@ jobs:
         # Get comment body from the environment variable
         caminho = os.environ['GITHUB_EVENT_PATH']
 
-        with open(caminho, 'wb') as file:
+        with open(caminho, 'r') as file:
           comment_body = file.read()
 
         # Define a regular expression to extract the issue code
