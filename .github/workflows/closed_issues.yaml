@@ -1,0 +1,14 @@
+name: Copy Issue To Qualidade
+on:
+  issues:
+    types: [closed]
+    
+jobs:
+  create_issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create issue using REST API
+        run: |
+          echo 'Teste'
