@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Show Comments
         run: |
-          echo ${{ github.event.issue.comment.body }}
+          echo ${{ github.event.issues.comments }}
