@@ -23,27 +23,33 @@ jobs:
         python - <<EOF
         import re
         import os
+        import json
 
-        # Get comment body from the environment variable
-        caminho = os.environ['GITHUB_EVENT_PATH']
+        # Get event path from the environment variable
+        var_strPathEventFile = os.environ['GITHUB_EVENT_PATH']
 
-        with open(caminho, 'r') as file:
-          comment_body = file.read()
+        # Convert json file to object json
+        with open(var_strPathEventFile, 'r') as file:
+          var_jsonResponseEvent = json.load(file)
 
+        # Get issue body from the json response
+        var_strIssueBody = var_jsonResponseEvent['issue']['body']
+        
         # Define a regular expression to extract the issue code
-        pattern = r'Issue NUMBER: (\d+)'
+        var_strPatternIssueNumber = r'Issue NUMBER: (\d+)'
 
-        # Search for the pattern in the comment body
-        match = re.search(pattern, comment_body)
+        # Search for the pattern in the issue body
+        var_matchIssueNumber = re.search(var_strPatternIssueNumber, var_strIssueBody)
 
-        print(comment_body)
+        print(var_strIssueBody)
         
         if match:
-            issue_code = match.group(1)
-            print(f"Extracted Issue Code: {issue_code}")
+            var_strIssueNumber = var_matchIssueNumber.group(1)
+            print(f"Extracted Issue Number: {var_strIssueNumber}")
             # You can use the 'issue_code' variable in further actions or steps
         else:
-            print("Issue Code not found in the comment body.")
+            print("Issue Number not found in the issue body.")
         EOF
+        echo var_strIssueNumber
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
