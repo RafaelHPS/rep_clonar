@@ -36,7 +36,7 @@ jobs:
         # Search for the pattern in the comment body
         match = re.search(pattern, comment_body)
 
-        print(str(os.environ['GITHUB_EVENT_PATH']))
+        print(comment_body)
         
         if match:
             issue_code = match.group(1)
