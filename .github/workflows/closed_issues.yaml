@@ -9,6 +9,6 @@ jobs:
     permissions:
       issues: write
     steps:
-      - name: Create issue using REST API
+      - name: Show Comments
         run: |
-          echo 'Teste'
+          echo ${{ github.event.issue.comments }}
